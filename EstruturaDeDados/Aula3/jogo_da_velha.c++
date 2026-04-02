@@ -92,7 +92,7 @@ bool atualizarHUD(int escolha, char simbolo){
             return true;
     }
 
-    // caso chegue aqui (escolha fora de 1..9), marca como inválida
+    std::cout << "Escolha inválida, tente novamente!!!" << std::endl;
     return false;
 }
 
@@ -158,13 +158,8 @@ int main(){
             std::cout << "Jogador 1: ";
             int escolha1;
             std::cin >> escolha1;
-
-            if(escolha1 < 1 || escolha1 > 9){
-                std::cout << "Escolha inválida, tente novamente!!!" << std::endl;
-                continue;
-            }
         
-            if(atualizarHUD(escolha1, 'X') == false){
+            if(!atualizarHUD(escolha1, 'X')){
                 continue;
             }
 
@@ -187,7 +182,7 @@ int main(){
                 continue;
             }
 
-            if(atualizarHUD(escolha2, 'O') == false){
+            if(!atualizarHUD(escolha2, 'O')){
                 continue;
             }
             
