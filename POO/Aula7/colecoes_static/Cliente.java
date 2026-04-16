@@ -4,7 +4,7 @@ public class Cliente {
     private String nome;
     private String cpf;
     private String profissao;
-    private int totalContas;
+    private final int totalContas;
 
 
     public Cliente(String n, String cpf) {
@@ -12,7 +12,7 @@ public class Cliente {
         this.cpf = cpf;
         this.totalContas = 0;
     }
-    }
+    
 
     public int getTotalContas() {
         return totalContas;
