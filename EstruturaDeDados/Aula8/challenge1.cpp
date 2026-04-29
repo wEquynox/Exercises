@@ -5,7 +5,7 @@ template <typename type>
 class pile {
 public:
 
-    type vet[100];
+    type vet[3];
     int top = -1;
 
     void push(type number) {

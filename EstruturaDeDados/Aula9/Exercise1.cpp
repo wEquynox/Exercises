@@ -35,9 +35,9 @@ int main() {
         
     }
 
-    if(stk.empty() || que.empty()) {
-        std::cout << "Eh um palindromo!!" << std::endl;
-    }
+    
+    std::cout << "Eh um palindromo!!" << std::endl;
+    
 
 
     return 0;
