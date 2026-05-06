@@ -1,12 +1,13 @@
 #include <iostream>
 
-
+#define MAX 3
 template <typename type>
 class pile {
 public:
 
-    type vet[3];
+    type vet[MAX];
     int top = -1;
+    int a = 0;
 
     void push(type number) {
         top++;
@@ -16,6 +17,12 @@ public:
     void pop() {
         std::cout << vet[top] << std::endl;
         top--;
+    }
+
+    int pop2() {
+        a = top;
+        top--;
+        return a;
     }
 
     bool empty() {
@@ -33,6 +40,7 @@ int main() {
         std::cout << "Digite numeros (0 encerra o processo)" << std::endl;
         std::cin >> number;
         pile1.push(number);
+
 
     } while (number != 0);
 
