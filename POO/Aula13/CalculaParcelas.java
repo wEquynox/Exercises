@@ -7,13 +7,13 @@ public class CalculaParcelas {
 
     public void processarCompra(Compra compra, int numeroDeParcelas) {
         
-        double parcelaBase = compra.getValor() / numeroParcelas;
+        double parcelaBase = compra.getValor() / numeroDeParcelas;
 
-        for (int i = 1; i <= numeroParcelas; i++) {
+        for (int i = 1; i <= numeroDeParcelas; i++) {
 
-            double parcelaComTaxa = servico.taxaDePagamento(parcelaBase, i);
+            double parcelaComTaxa = servicoDePagamento.taxaDePagamento(parcelaBase, i);
 
-            double parcelaFinal = servico.jurosAoMes(parcelaComTaxa);
+            double parcelaFinal = servicoDePagamento.jurosAoMes(parcelaComTaxa);
 
             Parcela parcela = new Parcela(i, parcelaFinal);
 
